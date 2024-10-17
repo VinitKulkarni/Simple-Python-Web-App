@@ -7,9 +7,23 @@
 </head>
 <body>
     <h1>Enter your username</h1>
-    <form action="/submit" method="post">
+    <form action="/" method="post">
         <input type="text" name="username" required>
         <button type="submit">Submit</button>
     </form>
+    
+    <h2>Users List</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user[0] }}</td>
+            <td>{{ user[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
