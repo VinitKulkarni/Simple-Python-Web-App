@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 def get_db_connection():
     connection = mysql.connector.connect(
-        host='database',  # Ensure this matches your Docker service name
+        host='db',  # Ensure this matches your Docker service name
         user='root',
         password='password',
         database='simple_db'
